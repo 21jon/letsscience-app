@@ -3,6 +3,7 @@ import { isLoggedIn } from './auth.js'
 import { store } from './initFirestore.js'
 import { QuizQuestion } from '@let-s-science/api-types/types'
 import { isQuiz } from '@let-s-science/api-types'
+import { auth } from 'firebase-admin'
 
 const router = express.Router() // eslint-disable-line max-len
 
@@ -27,6 +28,7 @@ router.get('/api/quiz/:id', isLoggedIn, (req, resp): void => {
       if (!query.empty) {
         const snapshot = query.docs[0]
         const data = snapshot.data()
+        delete data.correctAnswer
         resp.json(data)
       } else {
         resp.status(404).send()
@@ -53,6 +55,13 @@ router.post('/api/quiz', isLoggedIn, (req, resp): void => {
 
 router.delete('/api/quiz', (req, resp) => {
   store.collection('quizzes')
+})
+
+router.post('/api/quiz/anwser/:id', isLoggedIn, (req, resp): void => {
+    
+  
+
+  
 })
 
 export { router as quizRouter }

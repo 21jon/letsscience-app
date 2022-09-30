@@ -8,7 +8,8 @@ export interface QuizAnswer {
 export interface QuizQuestion {
   question: string
   answers: QuizAnswer[]
-  correctAnswer: number
+  //correctAnswer: number
+  correctAnswer?: number
 }
 
 export interface Quiz {
