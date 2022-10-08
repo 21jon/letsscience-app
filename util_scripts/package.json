@@ -1,0 +1,17 @@
+{
+  "name": "util_scripts",
+  "main": "index.js",
+  "scripts": {
+    "populate_firebase": "ts-node-esm src/populte_firebase_quizzes.ts"
+  },
+  "dependencies": {
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.11.0",
+    "firebase-tools": "^9.2.0",
+    "firebase": "^8.2.9"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2",
+    "typescript": "^4.8.4"
+  }
+}

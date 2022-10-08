@@ -13,7 +13,8 @@
     "types:build": "npm run types:generate && cd types && npm run build && cd ..",
     "functions:build": "npm run types:build && cd functions && npm run build && cd ..",
     "functions:lint": "cd functions && npm run lint && cd ..",
-    "functions:lint:fix": "cd functions && npm run lint:fix && cd .."
+    "functions:lint:fix": "cd functions && npm run lint:fix && cd ..",
+    "populate_firebase": "cd util_functions && npm run populate_firebase && cd .."
 
   },
   "dependencies": {
